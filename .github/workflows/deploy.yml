@@ -39,13 +39,7 @@ jobs:
       - name: Upload build output
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build  # если у тебя сборка идёт в dist/
-      
-      # Если проект без сборки (обычная вёрстка):
-      - name: Upload static files
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .  # загружаем все файлы из корня
+          path: ./build  # если у тебя сборка идёт в dist
 
       - name: Deploy to GitHub Pages
         id: deployment
